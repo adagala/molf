@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Briefcase, Users, Shield } from 'lucide-react';
 import Hero from './Hero';
 import './Home.css';

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Briefcase, Users, Shield, Home, Activity, Cpu } from 'lucide-react';
 import './PracticeAreas.css';
 

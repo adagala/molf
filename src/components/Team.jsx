@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 import './Team.css';
 
