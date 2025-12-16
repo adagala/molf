@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Scale, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import './Footer.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="container">

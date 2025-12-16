@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Mail, Phone } from 'lucide-react';
+import { TeamMember } from '../types';
 import './Team.css';
 
-const team = [
+const team: TeamMember[] = [
     {
         name: 'David Morgan',
         role: 'Senior Partner',
@@ -24,7 +25,7 @@ const team = [
     }
 ];
 
-const Team = () => {
+const Team: React.FC = () => {
     return (
         <section id="team" className="section team">
             <div className="container">

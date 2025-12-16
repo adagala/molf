@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Scale } from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { NavLink } from '../types';
 import './Header.css';
 
-const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+const Header: React.FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [scrolled, setScrolled] = useState<boolean>(false);
     const location = useLocation();
     const isHome = location.pathname === '/';
 
@@ -23,7 +24,7 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
+    const navLinks: NavLink[] = [
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Practice Areas', path: '/practice' },

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero: React.FC = () => {
     return (
         <section id="hero" className="hero">
             <div className="hero-overlay"></div>
