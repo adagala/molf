@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Users, Shield, Home, Activity, Cpu } from 'lucide-react';
+import { PracticeArea } from '../types';
 import './PracticeAreas.css';
 
-const practices = [
+const practices: PracticeArea[] = [
     {
         icon: <Briefcase size={40} />,
         title: 'Corporate Law',
@@ -36,7 +37,7 @@ const practices = [
     }
 ];
 
-const PracticeAreas = () => {
+const PracticeAreas: React.FC = () => {
     return (
         <section id="practice" className="section practice">
             <div className="container">

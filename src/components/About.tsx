@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 import './About.css';
 
-const About = () => {
+const About: React.FC = () => {
     return (
         <section id="about" className="section about">
             <div className="container about-container">

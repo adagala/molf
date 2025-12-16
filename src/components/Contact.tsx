@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import './Contact.css';
 
-const Contact = () => {
+const Contact: React.FC = () => {
     return (
         <section id="contact" className="section contact">
             <div className="container">
@@ -79,7 +79,7 @@ const Contact = () => {
                             <input type="tel" placeholder="Your Phone" />
                         </div>
                         <div className="form-group">
-                            <textarea placeholder="Message" rows="5" required></textarea>
+                            <textarea placeholder="Message" rows={5} required></textarea>
                         </div>
                         <button type="submit" className="btn btn-block">Send Message</button>
                     </motion.form>
@@ -97,7 +97,7 @@ const Contact = () => {
                         width="100%"
                         height="450"
                         style={{ border: 0 }}
-                        allowFullScreen=""
+                        allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         title="Morgan Omusundi Law Firm Location"

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Briefcase, Users, Shield } from 'lucide-react';
+import { ArrowRight, Briefcase, Users, Shield } from 'lucide-react';
 import Hero from './Hero';
 import './Home.css';
 
-const Home = () => {
+const Home: React.FC = () => {
     return (
         <div className="home">
             <Hero />
