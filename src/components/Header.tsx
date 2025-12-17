@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Scale } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { NavLink } from '../types';
-import './Header.css';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -33,43 +32,55 @@ const Header: React.FC = () => {
     ];
 
     // Always show dark header on non-home pages
-    const headerClass = `header ${scrolled || !isHome ? 'scrolled' : ''}`;
+    const headerBg = scrolled || !isHome ? 'bg-primary shadow-md' : 'bg-transparent';
 
     return (
-        <header className={headerClass}>
-            <div className="container header-container">
-                <Link to="/" className="logo">
-                    <Scale className="logo-icon" size={32} />
+        <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 text-white ${headerBg}`}>
+            <div className="container flex justify-between items-center mx-auto my-0">
+                <Link to="/" className="flex items-center gap-2 font-heading text-2xl font-bold text-accent">
+                    <Scale className="text-accent" size={32} />
                     <span>Morgan Omusundi Law Firm</span>
                 </Link>
 
-                <nav className="desktop-nav">
-                    <ul>
+                <nav className="hidden md:block">
+                    <ul className="flex gap-8">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <Link to={link.path}>{link.name}</Link>
+                                <Link 
+                                    to={link.path}
+                                    className="text-sm font-medium uppercase tracking-wider relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+                                >
+                                    {link.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
 
-                <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+                <button 
+                    className="md:hidden bg-transparent border-none cursor-pointer" 
+                    onClick={() => setIsOpen(!isOpen)}
+                >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
                 <AnimatePresence>
                     {isOpen && (
                         <motion.nav
-                            className="mobile-nav"
+                            className="absolute top-full left-0 w-full bg-primary p-8 shadow-md md:hidden"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <ul>
+                            <ul className="flex flex-col gap-6 text-center">
                                 {navLinks.map((link) => (
                                     <li key={link.name}>
-                                        <Link to={link.path} onClick={() => setIsOpen(false)}>
+                                        <Link 
+                                            to={link.path} 
+                                            onClick={() => setIsOpen(false)}
+                                            className="text-lg font-medium"
+                                        >
                                             {link.name}
                                         </Link>
                                     </li>

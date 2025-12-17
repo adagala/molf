@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 
 :root {
@@ -66,7 +67,7 @@ img {
   padding: 5rem 0;
 }
 
-/* Page specific styles for multi-page layout */
+/* Page specific styles for multi-page layout - needed for fixed header spacing */
 .about,
 .practice,
 .team,
@@ -75,37 +76,7 @@ img {
   min-height: 80vh;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-}
-
-.btn:hover {
-  background-color: #bfa13d;
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-}
-
-.btn-outline:hover {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-}
-
-/* Scrollbar */
+/* Scrollbar - Custom styles not available in Tailwind */
 ::-webkit-scrollbar {
   width: 10px;
 }

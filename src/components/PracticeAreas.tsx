@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Users, Shield, Home, Activity, Cpu } from 'lucide-react';
 import { PracticeArea } from '../types';
-import './PracticeAreas.css';
 
 const practices: PracticeArea[] = [
     {
@@ -39,29 +38,31 @@ const practices: PracticeArea[] = [
 
 const PracticeAreas: React.FC = () => {
     return (
-        <section id="practice" className="section practice">
-            <div className="container">
-                <div className="section-header text-center">
-                    <h4 className="section-subtitle">What We Do</h4>
-                    <h2 className="section-title">Our Practice Areas</h2>
-                    <p className="section-description">
+        <section id="practice" className="py-20 pt-48 min-h-[80vh] bg-bg">
+            <div className="container mx-auto">
+                <div className="text-center mb-16">
+                    <h4 className="text-accent uppercase tracking-wider text-sm font-semibold mb-2">What We Do</h4>
+                    <h2 className="text-4xl font-heading font-bold text-primary mb-4">Our Practice Areas</h2>
+                    <p className="max-w-[600px] mx-auto text-text-light">
                         We offer a wide range of legal services tailored to meet your specific needs.
                     </p>
                 </div>
 
-                <div className="practice-grid">
+                <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
                     {practices.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="practice-card"
+                            className="bg-white p-10 rounded-lg shadow-[0_5px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-b-[3px] border-b-transparent hover:-translate-y-2.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:border-b-accent"
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="icon-box">{item.icon}</div>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                            <a href="#contact" className="learn-more">Learn More &rarr;</a>
+                            <div className="text-accent mb-6">{item.icon}</div>
+                            <h3 className="text-2xl font-heading mb-4 text-primary">{item.title}</h3>
+                            <p className="text-text mb-6 leading-relaxed">{item.description}</p>
+                            <a href="#contact" className="text-accent font-semibold text-sm inline-flex items-center hover:text-primary transition-colors">
+                                Learn More &rarr;
+                            </a>
                         </motion.div>
                     ))}
                 </div>
