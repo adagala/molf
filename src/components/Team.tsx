@@ -6,10 +6,10 @@ import './Team.css';
 
 const team: TeamMember[] = [
     {
-        name: 'David Morgan',
-        role: 'Senior Partner',
+        name: 'Morgan Omusundi Esq.',
+        role: 'Managing and Senior Partner',
         image: '/lawyer-1.png', // Placeholder until new image is generated
-        bio: 'Specializing in corporate law with over 20 years of experience in high-stakes litigation.'
+        bio: 'Founded the firm on a bold vision to fuse socio-legal excellence with accessible people-centered justice. A dedicated legal mind driven by unwavering professional commitment to the rule of law.'
     },
     {
         name: 'Sarah Omusundi',

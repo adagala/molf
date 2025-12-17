@@ -1,39 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Users, Shield, Home, Activity, Cpu } from 'lucide-react';
+import { Briefcase, Users, Shield, Home, Activity, Scale, Handshake } from 'lucide-react';
 import { PracticeArea } from '../types';
 import './PracticeAreas.css';
 
 const practices: PracticeArea[] = [
     {
-        icon: <Briefcase size={40} />,
-        title: 'Corporate Law',
-        description: 'Expert guidance for businesses of all sizes, from startups to established corporations.'
-    },
-    {
-        icon: <Users size={40} />,
-        title: 'Family Law',
-        description: 'Compassionate representation for divorce, custody, and other family matters.'
-    },
-    {
-        icon: <Shield size={40} />,
-        title: 'Criminal Defense',
-        description: 'Aggressive defense strategies to protect your rights and freedom.'
+        icon: <Activity size={40} />,
+        title: 'Personal Injury & Compensation Claims',
+        description: 'We represent clients in road traffic accidents, workplace injuries, medical negligence, product liability and fatal accident claims to secure just, timely, and adequate compensation.'
     },
     {
         icon: <Home size={40} />,
-        title: 'Real Estate',
-        description: 'Comprehensive legal services for residential and commercial property transactions.'
+        title: 'Conveyancing & Property Law',
+        description: 'We handle land purchases, sales, leases, charges, discharges, title transfers, due diligence, and property development documentation with precision and efficiency.'
     },
     {
-        icon: <Activity size={40} />,
-        title: 'Personal Injury',
-        description: 'Fighting for the compensation you deserve after an accident or injury.'
+        icon: <Briefcase size={40} />,
+        title: 'Environment and Land',
+        description: 'Expert guidance on environmental law and land-related matters, ensuring compliance and protecting your property rights.'
     },
     {
-        icon: <Cpu size={40} />,
-        title: 'Intellectual Property',
-        description: 'Protecting your innovations, trademarks, and creative works.'
+        icon: <Scale size={40} />,
+        title: 'Succession, Probate & Estate Administration',
+        description: 'We guide families through will drafting, probate processes, administration of estates, distribution of assets, and resolution of inheritance disputes with sensitivity and clarity.'
+    },
+    {
+        icon: <Users size={40} />,
+        title: 'Employment & Labour Relations',
+        description: 'We act for both employers and employees in unfair termination claims, redundancy processes, workplace policies, disciplinary procedures, and collective bargaining matters.'
+    },
+    {
+        icon: <Shield size={40} />,
+        title: 'Criminal Defence & Advisory',
+        description: 'We defend clients in all criminal matters, ensure their rights are protected, provide bail applications, and navigate the criminal justice system with skill and tact.'
+    },
+    {
+        icon: <Handshake size={40} />,
+        title: 'Alternative Dispute Resolution',
+        description: 'Our ADR practice provides mediation and negotiation services aimed at resolving disputes efficiently and cost-effectively.'
     }
 ];
 

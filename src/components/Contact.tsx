@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -28,7 +28,12 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Our Office</h3>
-                                <p>123 Legal Avenue, Suite 500<br />Eldoret, Kenya</p>
+                                <p>
+                                    Laneens Center, 2nd Floor, Suite No. S.04<br />
+                                    Elgeyo Street, Next to Sirikwa/Cicada Hotel<br />
+                                    Eldoret, Kenya<br />
+                                    <strong>P.O. Box 9919-30100, Eldoret</strong>
+                                </p>
                             </div>
                         </div>
 
@@ -38,7 +43,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Phone</h3>
-                                <p>+254 (555) 123-4567<br />+254 (555) 987-6543</p>
+                                <p>0733366129</p>
                             </div>
                         </div>
 
@@ -48,7 +53,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Email</h3>
-                                <p>info@morganomusundi.com<br />support@morganomusundi.com</p>
+                                <p>morganomusundilawfirm@yahoo.com</p>
                             </div>
                         </div>
 
@@ -58,7 +63,19 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Office Hours</h3>
-                                <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: Closed</p>
+                                <p>Mon - Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM - 1:00 PM<br />Sun: Closed</p>
+                            </div>
+                        </div>
+
+                        <div className="info-item">
+                            <div className="icon-circle">
+                                <MessageCircle size={24} />
+                            </div>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>
+                                    <a href="https://wa.me/254733366129" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>Click to chat: 0733366129</a>
+                                </p>
                             </div>
                         </div>
                     </motion.div>

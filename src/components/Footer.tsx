@@ -32,10 +32,10 @@ const Footer: React.FC = () => {
                     <div className="footer-links">
                         <h3>Practice Areas</h3>
                         <ul>
-                            <li><a href="#">Family Law</a></li>
-                            <li><a href="#">Criminal Defense</a></li>
-                            <li><a href="#">Real Estate</a></li>
-                            <li><a href="#">Personal Injury</a></li>
+                            <li><a href="#practice">Personal Injury & Compensation</a></li>
+                            <li><a href="#practice">Conveyancing & Property Law</a></li>
+                            <li><a href="#practice">Succession & Estate Administration</a></li>
+                            <li><a href="#practice">Criminal Defence & Advisory</a></li>
                         </ul>
                     </div>
 

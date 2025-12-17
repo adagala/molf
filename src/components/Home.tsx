@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Briefcase, Users, Shield } from 'lucide-react';
+import { ArrowRight, Activity, Home as HomeIcon, Shield } from 'lucide-react';
 import Hero from './Hero';
 import './Home.css';
 
@@ -22,11 +22,13 @@ const Home: React.FC = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <h4 className="section-subtitle">Who We Are</h4>
-                            <h2 className="section-title">A Legacy of Legal Excellence</h2>
+                            <h2 className="section-title">A Legacy of Socio-Legal Excellence</h2>
                             <p>
-                                For over 25 years, Morgan Omusundi Law Firm has been a beacon of justice and integrity.
-                                We combine big-firm expertise with small-firm attention to detail, ensuring
-                                every client receives the personalized representation they deserve.
+                                Morgan Omusundi Law Firm Advocates (MOLA) stands as a dynamic, modern legal practice 
+                                combining sharp legal strategy with warm, client-focused experience. Founded on the 
+                                vision to fuse socio-legal excellence with accessible people-centered justice, we 
+                                believe the law is not merely a set of rules but a tool of justice empowerment and 
+                                societal transformation.
                             </p>
                             <Link to="/about" className="btn-text">
                                 Read More About Us <ArrowRight size={16} />
@@ -68,9 +70,9 @@ const Home: React.FC = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            <Briefcase size={32} className="snippet-icon" />
-                            <h3>Corporate Law</h3>
-                            <p>Strategic legal solutions for businesses.</p>
+                            <Activity size={32} className="snippet-icon" />
+                            <h3>Personal Injury & Compensation Claims</h3>
+                            <p>Securing just compensation for your injuries.</p>
                         </motion.div>
 
                         <motion.div
@@ -80,9 +82,9 @@ const Home: React.FC = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            <Users size={32} className="snippet-icon" />
-                            <h3>Family Law</h3>
-                            <p>Compassionate support for family matters.</p>
+                            <HomeIcon size={32} className="snippet-icon" />
+                            <h3>Conveyancing & Property Law</h3>
+                            <p>Professional property transaction services.</p>
                         </motion.div>
 
                         <motion.div
@@ -93,8 +95,8 @@ const Home: React.FC = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >
                             <Shield size={32} className="snippet-icon" />
-                            <h3>Criminal Defense</h3>
-                            <p>Aggressive protection of your rights.</p>
+                            <h3>Criminal Defence & Advisory</h3>
+                            <p>Protection of your rights in criminal matters.</p>
                         </motion.div>
                     </div>
 
