@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Scale, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <Link to="/" className="logo">
-                            <Scale className="logo-icon" size={28} />
+                            <img src="/logo.png?v=6" alt="MOLF Logo" className="logo-image" />
                             <span>Morgan Omusundi Law Firm</span>
                         </Link>
                         <p>
