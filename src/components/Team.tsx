@@ -6,22 +6,59 @@ import './Team.css';
 
 const team: TeamMember[] = [
     {
-        name: 'Morgan Omusundi Esq.',
-        role: 'Managing and Senior Partner',
-        image: '/lawyer-1.png', // Placeholder until new image is generated
-        bio: 'Founded the firm on a bold vision to fuse socio-legal excellence with accessible people-centered justice. A dedicated legal mind driven by unwavering professional commitment to the rule of law.'
+        name: 'Morgan Omusundi',
+        role: 'Position',
+        image: '/team/DSC_3839.jpg'
     },
     {
-        name: 'Sarah Omusundi',
-        role: 'Senior Partner',
-        image: '/lawyer-2.png', // Placeholder until new image is generated
-        bio: 'Expert in family law and mediation, dedicated to finding peaceful resolutions for complex cases.'
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3824.jpg'
     },
     {
-        name: 'James Ochieng',
-        role: 'Associate',
-        image: '/lawyer-1.png', // Placeholder until new image is generated
-        bio: 'Rising star in criminal defense, known for his strategic thinking and courtroom presence.'
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3826.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3834.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3903.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3911.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3913.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/DSC_3919.jpg'
+    },
+    {
+        name: 'Brian Omusundi',
+        role: 'Position',
+        image: '/team/DSC_3925.jpg'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/IMG_7664.JPG'
+    },
+    {
+        name: 'Name',
+        role: 'Position',
+        image: '/team/IMG_7665.JPG'
     }
 ];
 
@@ -59,7 +96,6 @@ const Team: React.FC = () => {
                             <div className="team-info">
                                 <h3>{member.name}</h3>
                                 <span className="role">{member.role}</span>
-                                <p>{member.bio}</p>
                             </div>
                         </motion.div>
                     ))}
