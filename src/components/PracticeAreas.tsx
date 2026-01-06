@@ -66,7 +66,6 @@ const PracticeAreas: React.FC = () => {
                             <div className="icon-box">{item.icon}</div>
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <a href="#contact" className="learn-more">Learn More &rarr;</a>
                         </motion.div>
                     ))}
                 </div>

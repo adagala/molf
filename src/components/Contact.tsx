@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
                             <div>
                                 <h3>WhatsApp</h3>
                                 <p>
-                                    <a href="https://wa.me/254733366129" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Click to chat: 0733366129</a>
+                                    <a href="https://wa.me/254733366129" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Click to chat: +254 733 366 129</a>
                                 </p>
                             </div>
                         </div>
