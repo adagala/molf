@@ -25,7 +25,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 0.8rem 1rem;
   transition: padding 0.3s ease;
 }
 
@@ -35,15 +35,40 @@
   gap: 0.5rem;
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
+.logo span {
+  font-weight: 400;
+}
+
 .logo-image {
-  height: 48px;
+  height: 36px;
   width: auto;
   object-fit: contain;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  line-height: 1;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--color-primary-950);
+}
+
+.logo-firm-name {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.logo-subtitle {
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .desktop-nav ul {
@@ -118,7 +143,7 @@
 @media (max-width: 768px) {
   .header {
     width: calc(100% - 2rem);
-    top: 0.5rem;
+    top: 1rem;
     border-radius: 40px;
   }
 
@@ -132,10 +157,6 @@
   
   .header-container {
     padding: 0.4rem 1rem;
-  }
-  
-  .header.scrolled .header-container {
-    padding: 1rem 1rem;
   }
   
   .logo {

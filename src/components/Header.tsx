@@ -52,7 +52,10 @@ const Header: React.FC = () => {
             <div className="container header-container">
                 <Link to="/" className="logo">
                     <img src="/logo.png?v=6" alt="MOLF Logo" className="logo-image" />
-                    <span>Morgan Omusundi Law Firm</span>
+                    <div className="logo-text-container">
+                        <div className="logo-firm-name">Morgan Omusundi</div>
+                        <div className="logo-subtitle">Law Firm Advocates</div>
+                    </div>
                 </Link>
 
                 <nav className="desktop-nav">

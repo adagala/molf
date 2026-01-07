@@ -15,13 +15,14 @@ const Hero: React.FC = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="hero-title">
-                        Justice, Integrity, <br />
-                        <span className="text-accent">Excellence.</span>
+                        Commissioners for Oaths <br />
+                        Notaries Public <br />
+                        Certified Professional Mediators
                     </h1>
-                    <p className="hero-subtitle">
+                    {/* <p className="hero-subtitle">
                         Defending your rights with unwavering dedication and legal expertise.
                         We are committed to delivering results that matter.
-                    </p>
+                    </p> */}
                     <div className="hero-buttons">
                         <Link to="/contact" className="btn">
                             Contact Us <ArrowRight size={16} style={{ marginLeft: '8px' }} />
