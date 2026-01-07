@@ -9,8 +9,11 @@ const Footer: React.FC = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <Link to="/" className="logo">
-                            <img src="/logo.png?v=6" alt="MOLF Logo" className="logo-image" />
-                            <span>Morgan Omusundi Law Firm</span>
+                            <img src="/logo-white.png?v=6" alt="MOLF Logo" className="logo-image" />
+                            <div className="logo-text-container">
+                                <div className="logo-firm-name">Morgan Omusundi</div>
+                                <div className="logo-subtitle">Law Firm Advocates</div>
+                            </div>
                         </Link>
                         <p>
                             Providing exceptional legal representation with integrity and dedication since 2000.
