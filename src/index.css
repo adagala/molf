@@ -62,6 +62,14 @@ img {
   padding: 0 2rem;
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+    margin: 0.5rem auto;
+  }
+}
+
+
 .section {
   padding: 5rem 0;
 }

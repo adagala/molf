@@ -106,6 +106,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
+}
+
 .map-container-inline {
   border-radius: 8px;
   overflow: hidden;
@@ -114,3 +126,4 @@
   height: 100%;
   min-height: 500px;
 }
+
