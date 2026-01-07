@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-  --color-primary: #2D1B69; /* Deep Purple from logo */
-  --color-primary-light: #4A3494;
+ --color-primary: #1a0f4d;
+
+  --color-primary-50:  #eaeeff;
+  --color-primary-100: #d9dfff;
+  --color-primary-200: #bbc3ff;
+  --color-primary-300: #929bff;
+  --color-primary-400: #6867ff;
+  --color-primary-500: #5444ff;
+  --color-primary-600: #4a24ff;
+  --color-primary-700: #4018ea;
+  --color-primary-800: #3417bc;
+  --color-primary-900: #2e1c93;
+  --color-primary-950: #1a0f4d;
+
+  --color-primary-light: #2d1f6a;
   --color-accent: #d4af37; /* Gold */
   --color-accent-light: #f3e5ab;
   --color-text: #334155;
@@ -98,7 +111,7 @@ img {
 }
 
 .btn:hover {
-  background-color: #bfa13d;
+  background-color: #c5a635;
   transform: translateY(-2px);
 }
 

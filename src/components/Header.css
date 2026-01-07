@@ -10,8 +10,11 @@
 }
 
 .header.scrolled {
-  background-color: var(--color-primary);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(234, 238, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(26, 15, 77, 0.08), 0 1px 3px rgba(26, 15, 77, 0.05);
+  color: var(--color-primary);
 }
 
 .header-container {
@@ -19,6 +22,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  /* padding: 0.75rem 2rem; */
+  transition: padding 0.3s ease;
 }
 
 .logo {
@@ -58,8 +63,9 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary-400));
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .desktop-nav a:hover::after {
@@ -79,9 +85,12 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: var(--color-primary);
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(234, 238, 255, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(26, 15, 77, 0.15);
+  border-top: 1px solid rgba(26, 15, 77, 0.1);
 }
 
 .mobile-nav ul {
@@ -107,6 +116,10 @@
   
   .header-container {
     padding: 0.5rem 1rem;
+  }
+  
+  .header.scrolled .header-container {
+    padding: 0.4rem 1rem;
   }
   
   .logo {
