@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Phone } from 'lucide-react';
 import { TeamMember } from '../types';
 import './Team.css';
 
@@ -85,13 +84,6 @@ const Team: React.FC = () => {
                         >
                             <div className="team-image">
                                 <img src={member.image} alt={member.name} />
-                                <div className="team-overlay">
-                                    <div className="social-links">
-                                        <a href="#"><Linkedin size={20} /></a>
-                                        <a href="#"><Mail size={20} /></a>
-                                        <a href="#"><Phone size={20} /></a>
-                                    </div>
-                                </div>
                             </div>
                             <div className="team-info">
                                 <h3>{member.name}</h3>
