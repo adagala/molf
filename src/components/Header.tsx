@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Scale } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { NavLink } from '../types';
 import './Header.css';
@@ -24,6 +24,18 @@ const Header: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Close mobile menu on window resize to desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isOpen]);
+
     const navLinks: NavLink[] = [
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
@@ -39,7 +51,7 @@ const Header: React.FC = () => {
         <header className={headerClass}>
             <div className="container header-container">
                 <Link to="/" className="logo">
-                    <Scale className="logo-icon" size={32} />
+                    <img src="/logo.png?v=6" alt="MOLF Logo" className="logo-image" />
                     <span>Morgan Omusundi Law Firm</span>
                 </Link>
 

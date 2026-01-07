@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-  --color-primary: #0f172a; /* Navy Blue */
-  --color-primary-light: #1e293b;
+  --color-primary: #2D1B69; /* Deep Purple from logo */
+  --color-primary-light: #4A3494;
   --color-accent: #d4af37; /* Gold */
   --color-accent-light: #f3e5ab;
   --color-text: #334155;
@@ -10,8 +10,8 @@
   --color-white: #ffffff;
   --color-bg: #f8fafc;
 
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: "Rubik", sans-serif;
+  --font-body: "Rubik", sans-serif;
 
   --transition: all 0.3s ease;
 }
@@ -61,6 +61,14 @@ img {
   margin: 1rem auto;
   padding: 0 2rem;
 }
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+    margin: 0.5rem auto;
+  }
+}
+
 
 .section {
   padding: 5rem 0;

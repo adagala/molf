@@ -2,11 +2,17 @@
   background-color: var(--color-white);
 }
 
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  gap: 2rem;
+  margin-top: -2rem;
 }
 
 .about-image {

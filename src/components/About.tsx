@@ -2,60 +2,78 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 import './About.css';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
     return (
         <section id="about" className="section about">
-            <div className="container about-container">
-                <motion.div
-                    className="about-image"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <img src="/about-img.png" alt="Lawyers meeting" />
-                    <div className="experience-badge">
-                        <span className="years">25+</span>
-                        <span className="text">Years of Experience</span>
-                    </div>
-                </motion.div>
+            <div className="container about-section">
+                <div>
+                    <h4 className="section-subtitle">About Morgan Omusundi Law Firm</h4>
+                    <h2 className="section-title">Fusing Socio-Legal Excellence with Accessible People-Centered Justice</h2>
+                </div>
 
-                <motion.div
-                    className="about-content"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                    <h4 className="section-subtitle">About Our Firm</h4>
-                    <h2 className="section-title">Committed to Helping Our Clients Succeed</h2>
+                <div className="about-container">
+                    <motion.div
+                        className="about-image"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <img src="/about-img.png" alt="Lawyers meeting" />
+                        <div className="experience-badge">
+                            <span className="years">25+</span>
+                            <span className="text">Years of Experience</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        className="about-content"
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <p className="about-text">
+                            Morgan Omusundi Law Firm was founded on a bold vision by our Managing and Senior Partner,
+                            Morgan Omusundi Esq., a dedicated legal mind driven by a mission to fuse socio-legal
+                            excellence with accessible people-centered justice.
+                        </p>
+                        <p className="about-text">
+                            At Morgan Omusundi Law Firm Advocates (MOLA), we are driven by this mission built on the
+                            foundation of unwavering professional commitment to the rule of law. We believe that the
+                            law is not merely a set of rules but a tool of justice empowerment and societal transformation.
+                        </p>
+                    </motion.div>
+                </div>
+
+                <div>
                     <p className="about-text">
-                        Morgan Omusundi Law Firm is a premier law firm dedicated to providing exceptional legal representation.
-                        With over two decades of experience, we have built a reputation for excellence,
-                        integrity, and results. Our team of skilled advocates works tirelessly to protect
-                        your rights and achieve the best possible outcome for your case.
+                        Today, MOLA stands as a dynamic, modern legal practice offering specialist services in
+                        various fields of the law. We pride ourselves in combining sharp legal strategy with warm,
+                        client-focused experience making justice not just a service but a partnership.
                     </p>
 
                     <ul className="about-list">
                         <li>
                             <CheckCircle size={20} className="check-icon" />
-                            <span>Award-winning legal representation</span>
+                            <span>Precision, commitment and deep understanding</span>
                         </li>
                         <li>
                             <CheckCircle size={20} className="check-icon" />
-                            <span>Dedicated team of specialists</span>
+                            <span>Diligence and client-centered representation</span>
                         </li>
                         <li>
                             <CheckCircle size={20} className="check-icon" />
-                            <span>Client-focused approach</span>
+                            <span>Thoughtful, strategic and result-oriented solutions</span>
                         </li>
                         <li>
                             <CheckCircle size={20} className="check-icon" />
-                            <span>Proven track record of success</span>
+                            <span>Relentless pursuit for justice</span>
                         </li>
                     </ul>
 
-                    <a href="#team" className="btn">Meet Our Team</a>
-                </motion.div>
+                    <Link to="/team" className="btn">Meet Our Team</Link>
+                </div>
             </div>
         </section>
     );

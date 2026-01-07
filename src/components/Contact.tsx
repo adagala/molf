@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -28,7 +28,12 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Our Office</h3>
-                                <p>123 Legal Avenue, Suite 500<br />Eldoret, Kenya</p>
+                                <p>
+                                    Laneens Center, 2nd Floor, Suite No. S.04<br />
+                                    Elgeyo Street, Next to Sirikwa/Cicada Hotel<br />
+                                    Eldoret, Kenya<br />
+                                    <strong>P.O. Box 9919-30100, Eldoret</strong>
+                                </p>
                             </div>
                         </div>
 
@@ -38,7 +43,9 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Phone</h3>
-                                <p>+254 (555) 123-4567<br />+254 (555) 987-6543</p>
+                                <p>
+                                    <a href='tel:+254733366129'>+254 733 366 129</a>
+                                </p>
                             </div>
                         </div>
 
@@ -48,7 +55,9 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Email</h3>
-                                <p>info@morganomusundi.com<br />support@morganomusundi.com</p>
+                                <p>
+                                    <a href='mailto:morganomusundilawfirm@yahoo.com'>morganomusundilawfirm@yahoo.com</a>
+                                </p>
                             </div>
                         </div>
 
@@ -58,51 +67,40 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <h3>Office Hours</h3>
-                                <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: Closed</p>
+                                <p>Mon - Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM - 1:00 PM<br />Sun: Closed</p>
+                            </div>
+                        </div>
+
+                        <div className="info-item">
+                            <div className="icon-circle">
+                                <MessageCircle size={24} />
+                            </div>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>
+                                    <a href="https://wa.me/254733366129" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Click to chat: +254 733 366 129</a>
+                                </p>
                             </div>
                         </div>
                     </motion.div>
 
-                    <motion.form
-                        className="contact-form"
+                    <motion.div
+                        className="map-container-inline"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <div className="form-group">
-                            <input type="text" placeholder="Your Name" required />
-                        </div>
-                        <div className="form-group">
-                            <input type="email" placeholder="Your Email" required />
-                        </div>
-                        <div className="form-group">
-                            <input type="tel" placeholder="Your Phone" />
-                        </div>
-                        <div className="form-group">
-                            <textarea placeholder="Message" rows={5} required></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-block">Send Message</button>
-                    </motion.form>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7979.307643579121!2d35.26656925678253!3d0.5202877540962668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178101e40379f4eb%3A0xc4239b531afd8948!2sLANEENS!5e0!3m2!1sen!2ske!4v1767422873317!5m2!1sen!2ske"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, minHeight: '500px' }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Morgan Omusundi Law Firm Location"
+                        ></iframe> </motion.div>
                 </div>
-
-                <motion.div
-                    className="map-container"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.06232679248!2d35.2697801!3d0.5142775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178101ae37f9f535%3A0x62a81d1da9e56a!2sEldoret!5e0!3m2!1sen!2ske!4v1701500000000!5m2!1sen!2ske"
-                        width="100%"
-                        height="450"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Morgan Omusundi Law Firm Location"
-                    ></iframe>
-                </motion.div>
             </div>
         </section>
     );
