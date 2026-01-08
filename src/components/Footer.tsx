@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <div>&copy; {new Date().getFullYear()} Morgan Omusundi Law Firm. All rights reserved.</div>
+                    <div>&copy; {new Date().getFullYear()} &middot; MORGAN OMUSUNDI Law Firm Advocates. All rights reserved.</div>
                 </div>
             </div>
         </footer>
