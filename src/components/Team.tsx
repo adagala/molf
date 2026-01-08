@@ -5,7 +5,7 @@ import './Team.css';
 
 const team: TeamMember[] = [
     {
-        name: 'Morgan Omusundi',
+        name: 'Name',
         role: 'Position',
         image: '/team/DSC_3839.jpg'
     },
@@ -45,7 +45,7 @@ const team: TeamMember[] = [
         image: '/team/DSC_3919.jpg'
     },
     {
-        name: 'Brian Omusundi',
+        name: 'Name',
         role: 'Position',
         image: '/team/DSC_3925.jpg'
     },
@@ -86,8 +86,8 @@ const Team: React.FC = () => {
                                 <img src={member.image} alt={member.name} />
                             </div>
                             <div className="team-info">
-                                <h3>{member.name}</h3>
-                                <span className="role">{member.role}</span>
+                                <h3>{member.name} {index + 1}</h3>
+                                <span className="role">{member.role} {index + 1}</span>
                             </div>
                         </motion.div>
                     ))}

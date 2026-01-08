@@ -20,10 +20,10 @@ const About: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <img src="/about-img.png" alt="Lawyers meeting" />
+                        <img src="/banner.png" alt="Lawyers meeting" />
                         <div className="experience-badge">
                             <span className="years">25+</span>
-                            <span className="text">Years of Experience</span>
+                            <span className="text">Years <span>of Experience</span></span>
                         </div>
                     </motion.div>
 

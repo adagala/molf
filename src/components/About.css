@@ -26,11 +26,11 @@
 
 .experience-badge {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: -30px;
+  right: -70px;
   background-color: var(--color-accent);
   color: var(--color-primary);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@
 
 .experience-badge .years {
   display: block;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -93,12 +93,29 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .about-image {
     order: 2;
   }
-  
+
   .about-content {
     order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-badge {
+    bottom: -30px;
+    right: -10px;
+    padding: 1rem 1.5rem;
+  }
+
+  .experience-badge .years {
+    font-size: 1rem;
+  }
+
+  .experience-badge .text span {
+    display: none;
+    font-size: 0.8rem;
   }
 }

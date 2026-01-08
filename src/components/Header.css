@@ -187,4 +187,8 @@
   .logo-image {
     height: 32px;
   }
+
+  .logo-text-container {
+    display: none;
+  }
 }
