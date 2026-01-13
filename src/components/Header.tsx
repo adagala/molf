@@ -47,8 +47,30 @@ const Header: React.FC = () => {
     // Always show dark header on non-home pages
     const headerClass = `header ${scrolled || !isHome ? 'scrolled' : ''}`;
 
+    const navVariants = {
+        hidden: { opacity: 0, y: -10 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: -10 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
-        <header className={headerClass}>
+        <motion.header
+            className={headerClass}
+            initial={{ y: -100, x: "-50%", opacity: 0 }}
+            animate={{ y: 0, x: "-50%", opacity: 1 }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        >
             <div className="container header-container">
                 <Link to="/" className="logo">
                     <img src="/logo.png?v=6" alt="MOLF Logo" className="logo-image" />
@@ -59,13 +81,32 @@ const Header: React.FC = () => {
                 </Link>
 
                 <nav className="desktop-nav">
-                    <ul>
-                        {navLinks.map((link) => (
-                            <li key={link.name}>
-                                <Link to={link.path}>{link.name}</Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <motion.ul
+                        variants={navVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {navLinks.map((link) => {
+                            const isActive = location.pathname === link.path;
+                            return (
+                                <motion.li key={link.name} variants={itemVariants} className="nav-link-container">
+                                    <Link
+                                        to={link.path}
+                                        className={isActive ? 'active' : ''}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                    {isActive && (
+                                        <motion.div
+                                            className="active-indicator"
+                                            layoutId="activeIndicator"
+                                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                        />
+                                    )}
+                                </motion.li>
+                            );
+                        })}
+                    </motion.ul>
                 </nav>
 
                 <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -76,25 +117,34 @@ const Header: React.FC = () => {
                     {isOpen && (
                         <motion.nav
                             className="mobile-nav"
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ opacity: 0, scale: 0.95, y: -20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: -20 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
                         >
                             <ul>
-                                {navLinks.map((link) => (
-                                    <li key={link.name}>
-                                        <Link to={link.path} onClick={() => setIsOpen(false)}>
+                                {navLinks.map((link, index) => (
+                                    <motion.li
+                                        key={link.name}
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.05 }}
+                                    >
+                                        <Link
+                                            to={link.path}
+                                            onClick={() => setIsOpen(false)}
+                                            className={location.pathname === link.path ? 'active' : ''}
+                                        >
                                             {link.name}
                                         </Link>
-                                    </li>
+                                    </motion.li>
                                 ))}
                             </ul>
                         </motion.nav>
                     )}
                 </AnimatePresence>
             </div>
-        </header>
+        </motion.header>
     );
 };
 
