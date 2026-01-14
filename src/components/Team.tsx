@@ -1,100 +1,101 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { TeamMember } from '../types';
-import './Team.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { TeamMember } from "../types";
+import "./Team.css";
 
 const team: TeamMember[] = [
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3839.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3824.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3826.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3834.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3903.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3911.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3913.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3919.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/DSC_3925.jpg'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/IMG_7664.JPG'
-    },
-    {
-        name: 'Name',
-        role: 'Position',
-        image: '/team/IMG_7665.JPG'
-    }
+  {
+    name: "Morgan Omusundi",
+    role: "Managing Partner",
+    image: "/team/DSC_3839.jpg",
+  },
+  {
+    name: "Naum Kirarei",
+    role: "Administrative Secretary",
+    image: "/team/DSC_3824.jpg",
+  },
+  {
+    name: "Caleb Kibet Koskei",
+    role: "Advocate",
+    image: "/team/DSC_3826.jpg",
+  },
+  {
+    name: "Adamson Mogire",
+    role: "Advocate",
+    image: "/team/DSC_3834.jpg",
+  },
+  {
+    name: "Tett Norire",
+    role: "Advocate",
+    image: "/team/DSC_3903.jpg",
+  },
+  {
+    name: "Joyce Akinyi",
+    role: "Advocate",
+    image: "/team/DSC_3911.jpg",
+  },
+  {
+    name: "-",
+    role: "-",
+    image: "/team/DSC_3913.jpg",
+  },
+  {
+    name: "-",
+    role: "-",
+    image: "/team/DSC_3919.jpg",
+  },
+  {
+    name: "Brian Omusundi",
+    role: "ICT Administrator",
+    image: "/team/DSC_3925.jpg",
+  },
+  {
+    name: "Ivyne Joan Okisa",
+    role: "Administrative Clerk",
+    image: "/team/IMG_7664.JPG",
+  },
+  {
+    name: "Sheila Lusioli",
+    role: "Clerical Secretary",
+    image: "/team/IMG_7665.JPG",
+  },
 ];
 
 const Team: React.FC = () => {
-    return (
-        <section id="team" className="section team">
-            <div className="container">
-                <div className="section-header text-center">
-                    <h4 className="section-subtitle">Our Advocates</h4>
-                    <h2 className="section-title">Meet The Team</h2>
-                    <p className="section-description">
-                        Our diverse team of legal experts brings a wealth of knowledge and experience to every case.
-                    </p>
-                </div>
+  return (
+    <section id="team" className="section team">
+      <div className="container">
+        <div className="section-header text-center">
+          <h4 className="section-subtitle">Our Advocates</h4>
+          <h2 className="section-title">Meet The Team</h2>
+          <p className="section-description">
+            Our diverse team of legal experts brings a wealth of knowledge and
+            experience to every case.
+          </p>
+        </div>
 
-                <div className="team-grid">
-                    {team.map((member, index) => (
-                        <motion.div
-                            key={index}
-                            className="team-card"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <div className="team-image">
-                                <img src={member.image} alt={member.name} />
-                            </div>
-                            <div className="team-info">
-                                <h3>{member.name} {index + 1}</h3>
-                                <span className="role">{member.role} {index + 1}</span>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+        <div className="team-grid">
+          {team.map((member, index) => (
+            <motion.div
+              key={index}
+              className="team-card"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="team-image">
+                <img src={member.image} alt={member.name} />
+              </div>
+              <div className="team-info">
+                <h3>{member.name}</h3>
+                <span className="role">{member.role}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Team;
